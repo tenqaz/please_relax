@@ -30,6 +30,10 @@ jobs:
           requirements: ../requirements.txt
           spec: ../please_relax.spec
           
+      - run: echo ${pwd}
+      - run: ls dist
+      - run: ls dist/windows
+      - run: ls please_relax
       
       - uses: actions/upload-artifact@v2
         with:
