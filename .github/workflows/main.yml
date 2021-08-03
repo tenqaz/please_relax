@@ -36,6 +36,8 @@ jobs:
      
       - uses: marvinpinto/action-automatic-releases@latest
         with:
+          automatic_release_tag: "latest"
+          title: "release Build"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: please_relax/dist/windows/please_relax.exe
