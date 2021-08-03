@@ -26,7 +26,7 @@ jobs:
       - name: PyInstaller Windows
         uses: JackMcKew/pyinstaller-action-windows@v0.1.2
         with:
-          path: please_reax
+          path: please_relax
           requirements: ../please_relax.spec
           spec: ../requirements.txt
           
