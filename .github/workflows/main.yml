@@ -34,5 +34,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: please_relax
-          path: please_reax/dist
+          path: dist/windows
 
