@@ -34,10 +34,10 @@ jobs:
         with:
           path: please_relax/dist/windows/please_relax.exe
      
-      - uses: fnkr/github-action-ghr@v1.3
-        env:
-            GHR_COMPRESS: zip
-            GHR_PATH: please_relax/dist/windows/please_relax.exe
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: please_relax/dist/windows/please_relax.exe
       
    
