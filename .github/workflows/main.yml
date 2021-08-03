@@ -33,6 +33,5 @@ jobs:
       
       - uses: actions/upload-artifact@v2
         with:
-          name: please_relax
-          path: dist/windows
+          path: dist/windows/please_relax.exe
 
