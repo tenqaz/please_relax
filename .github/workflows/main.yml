@@ -27,8 +27,8 @@ jobs:
         uses: JackMcKew/pyinstaller-action-windows@v0.1.2
         with:
           path: please_relax
-          requirements: ../please_relax.spec
-          spec: ../requirements.txt
+          requirements: ../requirements.txt
+          spec: ../please_relax.spec
           
       
       - uses: actions/upload-artifact@v2
