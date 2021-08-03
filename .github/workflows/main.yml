@@ -26,13 +26,14 @@ jobs:
         
       - name: PyInstaller Windows
         uses: JackMcKew/pyinstaller-action-windows@v0.1.2
-        with:
+        with:          
           path: please_relax
           requirements: ../requirements.txt
           spec: ../please_relax.spec
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
+          automatic_release_tag: "latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: please_relax/dist/windows/please_relax.exe
