@@ -29,13 +29,15 @@ jobs:
           path: please_relax
           requirements: ../requirements.txt
           spec: ../please_relax.spec
-          
-      - run: echo ${pwd}
-      - run: ls please_relax
-      - run: ls please_relax/dist
-      - run: ls please_relax/dist/windows
       
       - uses: actions/upload-artifact@v2
         with:
           path: please_relax/dist/windows/please_relax.exe
-
+     
+      - uses: fnkr/github-action-ghr@v1.3
+        env:
+            GHR_COMPRESS: zip
+            GHR_PATH: please_relax/dist/windows/please_relax.exe
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+   
