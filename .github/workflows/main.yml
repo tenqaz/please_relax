@@ -23,16 +23,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - run: pip install -r requirements.txt
-      - run: pyinstaller -F -w please_relax/main.py -n please_relax.exe
 
-      - run: ls dist
+      - name: Package Application
+      uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: please_relax
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: dist/please_relax.exe
+          files: please_relax/dist/windows/please_relax.exe
       
    
