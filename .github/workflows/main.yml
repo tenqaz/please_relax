@@ -25,7 +25,9 @@ jobs:
       - uses: actions/checkout@v2
       
       - run: pip install -r requirements.txt
-      - run: pyinstaller -F -w please_relax/main.py -n please_relax
+      - run: pyinstaller -F -w please_relax/main.py -n please_relax.exe
+
+      - run: ls dist
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
