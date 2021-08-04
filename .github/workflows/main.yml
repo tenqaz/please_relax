@@ -24,10 +24,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: please_relax
+      - uses: JackMcKew/pyinstaller-action-windows@main
+        with:
+          path: please_relax
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
